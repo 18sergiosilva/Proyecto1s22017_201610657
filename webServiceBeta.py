@@ -15,11 +15,22 @@ def h():
 def crearUsuario():
 	nombredeusuario = str(request.form['NOMBRE DE USUARIO:'])
 	password = str(request.form['CONTRASEÑA: '])
-	//verificar contraseña y nombre de usuario 
+	# verificar contraseña y nombre de usuario 
 	return "SE HA REGISTRADO EXITOSAMENTE"
 
 
+@app.route('/crearCarpeta', methods=['POST'])
+def crearCarpeta():
+	nombredecarpeta = str(request.form['NOMBRE DE LA CARPETA'])
+	#añadir la carpeta
+	return "CARPETA AÑADIDA"
 
+@app.route('/crearArchivo', methods=['POST'])
+def crearArchivo():
+	nombredearchivo = str(request.form['NOMBRE DEL ARCHIVO'])
+	nombredelacarpeta = str(request.form['NOMBRE DE LA CARPETA'])
+	#añadir el archivo
+	return "ARCHIVO AÑADIDO"
 
 
 
